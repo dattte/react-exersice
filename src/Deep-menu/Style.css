@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.display-block.display-block.display-block.display-block {
+    display: block;
+}
+.relative{
+    position: relative;
+}
+
+.bg_menu-deep {
+    background-color: #eeeeee;
+    width: 100%;
+    padding: 20px;
+}
+.menu-deep_list {
+    width: 300px;
+}
+.menu-deep_list .menu-deep_item {
+    list-style: none;
+    background-color: #fff;
+}
+.menu-deep_list .menu-deep_item:first-child {
+    border-radius: 3px 3px 0 0;
+}
+.menu-deep_list .menu-deep_item:last-child {
+    border-radius: 0 0 3px 3px;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link:hover,
+.menu-deep_list .menu-deep_item:hover > .menu-deep_link {
+    color: #e6822b;
+}
+.menu-deep_list .menu-deep_item:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link {
+    display: flex;
+    padding: 15px 30px;
+    font-size: 22px;
+    color: #7c7c7c;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link .menu-deep_icon {
+    display: inline-block;
+    padding: 0 5px;
+    width: 35px;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link .menu-deep_boxtext {
+    margin-left: 10px;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link .menu-deep_text {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link .menu-deep_textsub {
+    font-size: 16px;
+}
+/* deep_active thẻ nào fold thì thêm class */
+.menu-deep_list .menu-deep_item.menu-deep_active .menu-deep_link {
+    color: #e6822b;
+}
+.menu-deep_list > .menu-deep_item .menu-deep_link.menu-deep_active {
+    box-shadow: 0px 0px 2px #999;
+    position: relative;
+    color: #e6822b;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link.menu-deep_active::after,
+.menu-deep_list .menu-deep_item .menu-deep_link.menu-deep_active::before {
+    content: "";
+    height: 100%;
+    width: 6px;
+    background-color: #e57d23;
+    position: absolute;
+    top: 0;
+    border-right: 1px solid #e6d4c5;
+    border-left: 1px solid #e6d4c5;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link.menu-deep_active::after {
+    left: 100%;
+}
+.menu-deep_list .menu-deep_item .menu-deep_link.menu-deep_active::before {
+    right: 100%;
+}
+.menu-deep_list .menu-deep_item.menu-deep_active-pseudo::before,
+.menu-deep_list .menu-deep_item.menu-deep_active-pseudo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+    z-index: 2;
+}
+.menu-deep_list .menu-deep_item.menu-deep_active-pseudo:after {
+    left: 100%;
+    border-right: 6px solid #e57d23;
+    transform: translate(-80%,-50%);
+}
+.menu-deep_list .menu-deep_item.menu-deep_active-pseudo::before {
+    right: 100%;
+    border-left: 6px solid #e57d23;
+    transform: translate(80%,-50%);
+}
+
+/* Menu dropdown */
+.menu-dropdown_list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu-deep_list .menu-deep_item:hover > .menu-dropdown_list {
+   opacity: 1;
+   visibility: visible;
+   left: 100%;
+}
+.menu-dropdown_list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #e57d23;
+    border: 1px solid #f9e1cc;
+    cursor: pointer;
+    z-index: 3;
+}
+.menu-dropdown_list .menu-deep_item:first-child {
+    position: relative;
+}
+.menu-dropdown_list .menu-deep_item:first-child::after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    border-right: 6px solid #e57d23;
+    transform: translate(-100%,-50%);
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+    z-index: 3;
+    cursor: pointer;
+}
+/* input search */
+.menu-deep_list .menu-deep_item .menu-deep_box {
+    padding: 15px 30px;
+    position: relative;
+}
+.menu-deep_list .menu-deep_item .menu-deep_box .menu-deep_search {
+    padding: 5px 10px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: #7c7c7c;
+    border: 1px solid #f2f2f2;
+    font-size: 16px;
+}
+.menu-deep_list .menu-deep_item .menu-deep_box .menu-deep_search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-75%, -50%);
+    height: 40px;
+    background-color: #e57d23;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.menu-deep_list .menu-deep_item .menu-deep_box .menu-deep_search-icon:hover {
+    background-color: #c76f23;
+}
