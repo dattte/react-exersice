@@ -1,0 +1,96 @@
+.container {
+    width: 600px;
+    height: 100%;
+    background-color: gray;
+}
+.container>h1 {
+    margin: 0 auto;
+    font-size: 10px;
+}
+.container .main {
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 auto;
+}
+.container .plus-task {
+    width: 100%;
+    height: 18%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: red;
+    display: flex;
+}
+.container .plus-task .need-todo {
+    border: none;
+    width: 89%;
+    height: 100%;
+    border-top-left-radius: 10px;
+}
+.container .plus-task .plus-button {
+    border: none;
+    width: 9%;
+    height: 100%;
+    border-top-right-radius: 10px;
+}
+
+.container .tag {
+    width: 100%;
+    height: 12%;
+    background-color: red;
+}
+.container .tag .tag-all {
+    width: 10%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 30px;
+}
+.container .tag .tag-home {
+    width: 10%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 30px;
+}
+.container .tag .tag-work {
+    width: 10%;
+    height: 100%;
+    background-color: green;
+    border-radius: 30px;
+}
+.container .tag .tag-school {
+    width: 10%;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 30px;
+}
+
+.container .what-todo {
+    width: 100%;
+    height: 40%;
+}
+
+.container .process-button {
+    width: 100%;
+    height: 30%;
+    background-color: blue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container .process-button .all-task {
+    width: 25%;
+    height: 100%;
+    border-radius: 30px;
+}
+.container .process-button .active {
+    width: 25%;
+    height: 100%;
+    border-radius: 30px;
+}.container .process-button .completed {
+    width: 25%;
+    height: 100%;
+    border-radius: 30px;
+}

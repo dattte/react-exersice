@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./list.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>REACT TODO APP</h1>
+        <div class="main">
+            <div class="plus-task">
+                <input type="text" class="need-todo" id="list" placeholder="What do you need to do?">
+                <button class="plus-button" onclick="myPlus()">+</button>
+            </div>
+            <div class="tag">
+                <button class="tag-all" onclick="showAll()">All</button>
+                <button class="tag-home">Home</button>
+                <button class="tag-work">Work</button>
+                <button class="tag-school">School</button>
+            </div>
+            <div id="what-todo"></div>
+            <div class="process-button">
+                <button class="all-task">All tasks</button>
+                <button class="active">Acitve</button>
+                <button class="completed">Completed</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
